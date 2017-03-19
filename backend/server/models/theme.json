@@ -1,0 +1,28 @@
+
+{
+  "name": "theme",
+  "plural": "themes",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "id": true,
+      "required": true,
+      "default": " "
+    },
+    "themeURL": {
+      "type": "string",
+      "required": true,
+      "default": " "
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
+

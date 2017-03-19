@@ -1,0 +1,114 @@
+
+{
+    "AdvancedMobileAccess": [
+        {
+            "credentials": {
+                "serverUrl": "https://imf-authserver.ng.bluemix.net/imf-authserver",
+                "clientId": "b2fa3171-c88a-49f3-9bb9-f694374beef1",
+                "secret": "NjE4ZTkwMjMtYzI1ZC00NTA2LTgwNmEtMDY0MzZmZTFmOGRk",
+                "tenantId": "b2fa3171-c88a-49f3-9bb9-f694374beef1",
+                "authorizationEndpoint": "https://mobileclientaccess.ng.bluemix.net/oauth/v2/authorization",
+                "tokenEndpoint": "https://mobileclientaccess.ng.bluemix.net/oauth/v2/token",
+                "admin_url": "https://mobile.ng.bluemix.net/imfmobileplatformdashboard?tenantId=b2fa3171-c88a-49f3-9bb9-f694374beef1"
+            },
+            "syslog_drain_url": null,
+            "label": "AdvancedMobileAccess",
+            "provider": null,
+            "plan": "Gold",
+            "name": "opto-AdvancedMobileAccess",
+            "tags": [
+                "mobile",
+                "ibm_created",
+                "ibm_dedicated_public"
+            ]
+        }
+    ],
+    "imfpush": [
+        {
+            "credentials": {
+                "appGuid": "a043ae03-719c-411a-a06c-4edb87c57641",
+                "url": "http://imfpush.ng.bluemix.net/imfpush/v1/apps/a043ae03-719c-411a-a06c-4edb87c57641",
+                "admin_url": "//mobile.ng.bluemix.net/imfpushdashboard/?appGuid=a043ae03-719c-411a-a06c-4edb87c57641",
+                "appSecret": "185f3004-343a-4558-98ed-8030c633603a",
+                "clientSecret": "a966cee7-016e-437c-8148-08f1e77d47a2"
+            },
+            "syslog_drain_url": null,
+            "label": "imfpush",
+            "provider": null,
+            "plan": "Basic",
+            "name": "opto-imfpush",
+            "tags": [
+                "mobile",
+                "ibm_created",
+                "ibm_dedicated_public"
+            ]
+        }
+    ],
+    "iotf-service": [
+        {
+            "credentials": {
+                "iotCredentialsIdentifier": "a2g6k39sl6r5",
+                "mqtt_host": "o0olpf.messaging.internetofthings.ibmcloud.com",
+                "mqtt_u_port": 1883,
+                "mqtt_s_port": 8883,
+                "http_host": "o0olpf.internetofthings.ibmcloud.com",
+                "org": "o0olpf",
+                "apiKey": "a-o0olpf-aanojiili8",
+                "apiToken": "EFX)qG-b)Km3ZI5f74"
+            },
+            "syslog_drain_url": null,
+            "label": "iotf-service",
+            "provider": null,
+            "plan": "iotf-service-free",
+            "name": "Internet of Things Platform-mh",
+            "tags": [
+                "internet_of_things",
+                "Internet of Things",
+                "ibm_created",
+                "ibm_dedicated_public",
+                "lite"
+            ]
+        }
+    ],
+    "compose-for-mongodb": [
+        {
+            "credentials": {
+                "db_type": "mongodb",
+                "name": "bmix_dal_yp_f600c308_1f71_4c6c_ad39_a1f27b0866b5",
+                "uri_cli": "mongo --ssl --sslAllowInvalidCertificates sl-us-dal-9-portal.5.dblayer.com:20457/admin -u admin -p DIMRIIXPEDBLZMJQ",
+                "ca_certificate_base64": "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURnVENDQW1tZ0F3SUJBZ0lFV0xRSk9EQU5CZ2txaGtpRzl3MEJBUTBGQURCQ01VQXdQZ1lEVlFRREREZHEKYjJodWVXUnZaVGt4TVRsQVoyMWhhV3d1WTI5dExUWmtZakpoWm1JelpHVXdNV00yWkRsaE9UWTVPVEJoT0RFNQpPVGRsTjJGbU1CNFhEVEUzTURJeU56RXhNVEEwT0ZvWERUTTNNREl5TnpFeE1EQXdNRm93UWpGQU1ENEdBMVVFCkF3dzNhbTlvYm5sa2IyVTVNVEU1UUdkdFlXbHNMbU52YlMwMlpHSXlZV1ppTTJSbE1ERmpObVE1WVRrMk9Ua3cKWVRneE9UazNaVGRoWmpDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBTEh3RnpmLwpaZXdrR1hpUTJMNnMzQjk2MW9VL1NUK3Z2N3dTMUpmWU9iRDZqNGhJajlSaFQyWnhGRGtxMjkrNEl6NnZtMzAyCkhFV1lyOHViK1h0bVV2TjQ2c1duejA2MzFqZFQza1IxSFZyc0ppSUx4Q2E0b09wMHNBWkR5VkFLQkdGaG52UGYKZDdoNFVBMlVuRkVJM3F2bFV5dkgxYVJkK3plaVlXcGJtWlp1ejE0TmJnUzNWbGcrUDNSWGJSS29vRGpidUh3dQp2V1FyQ1d1NEFLMEl2RlpVQVBFcE1scHAvc1dhdzZOVDF2NTJjaDkxY1BtQVVVcHFCNVJLendFQ04wSzVWNTFnCm85dWs3NTdrZnRpMHRVWnhjNWI1bVVoTzQyeGFha0M2YTJJMi91STBrbkJIbzRuYURRYzV5aDAxVFV1dk5BNFYKdXBlWTNXVVdXZEd3WUNNQ0F3RUFBYU4vTUgwd0hRWURWUjBPQkJZRUZPWGcxLzRhdnFnSEppc3lTelhWT0VSSApIV2NqTUE0R0ExVWREd0VCL3dRRUF3SUNCREFkQmdOVkhTVUVGakFVQmdnckJnRUZCUWNEQVFZSUt3WUJCUVVICkF3SXdEQVlEVlIwVEJBVXdBd0VCL3pBZkJnTlZIU01FR0RBV2dCVGw0TmYrR3I2b0J5WXJNa3MxMVRoRVJ4MW4KSXpBTkJna3Foa2lHOXcwQkFRMEZBQU9DQVFFQUgwR0tOSnhSTHRVOHRNY0piZFI1bFFMQjdobE9Bd1E4Qit0WgpGQnRkbTN1b2trWjZKNEwwaERYT2o4RjdKWWhad1d0SzJLSDA0eU9QQ2xrWkxXcUIvK3hnUXhMVjlVTUxPUk16Cnl4WmlIdEp6Sis3RG5xNmJNR0Z1UnZpaURWbWpTSGJsNDRPL1dJNWo5dlI5SGZ1bkovYjFwcWRsdHMzMWVLK0gKYXZuaTVSVkQwNzlVM0F4TXMrTmNtdlc0R0xXNEpPNXFaL2pueGNoZ1RDcHk1b3hUVHFJdFpiMVJWM2hCV2lrSQpmd3o3bWsxeEluUzRHdkovMG0xdjVCWHZna3duM1cyMko3UWNYaENMbVVQK0Q3cXc0UE1qMW9kUTczcUUzOWZ6Cjc0d0dqMTVXQ2Mwd1FHNGl4SFFkRXhNcHdQUHBkMTFKL3JMV0wxSUZzSmQ3cmFBRkRnPT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=",
+                "deployment_id": "58b409302d4eb53e4a004469",
+                "uri": "mongodb://admin:DIMRIIXPEDBLZMJQ@sl-us-dal-9-portal.5.dblayer.com:20457,sl-us-dal-9-portal.7.dblayer.com:20457/admin?ssl=true"
+            },
+            "syslog_drain_url": null,
+            "label": "compose-for-mongodb",
+            "provider": null,
+            "plan": "Standard",
+            "name": "Compose for MongoDB-3y",
+            "tags": [
+                "big_data",
+                "data_management",
+                "ibm_created"
+            ]
+        }
+    ],
+    "Application Security on Cloud": [
+        {
+            "credentials": {
+                "bindingid": "88a85cfa-c701-e711-842e-002590ac753d",
+                "password": "Mn1ep1fU8T8+d3ejCbhl+kHmgXEnIVrYi+yS7mJMUag="
+            },
+            "syslog_drain_url": null,
+            "label": "Application Security on Cloud",
+            "provider": null,
+            "plan": "standard",
+            "name": "Application Security on Cloud-p0",
+            "tags": [
+                "Security",
+                "security",
+                "ibm_created",
+                "ibm_dedicated_public"
+            ]
+        }
+    ]
+}

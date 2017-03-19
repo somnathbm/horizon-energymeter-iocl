@@ -1,0 +1,58 @@
+
+{
+  "name": "client",
+  "plural": "clients",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "clientID": {
+      "type": "string",
+      "id": true,
+      "required": true,
+      "index": true,
+      "default": "cl123"
+    },
+    "email": {
+      "type": "string",
+      "required": true,
+      "index": true,
+      "default": "john@doe.com"
+    },
+    "name": {
+      "type": "string",
+      "required": true,
+      "default": "john"
+    },
+    "phone": {
+      "type": "string",
+      "required": true,
+      "default": "9696969696"
+    },
+    "auth_token": {
+      "type": "string",
+      "required": false
+    },
+    "invitation_code": {
+      "type": "string",
+      "required": false
+    },
+    "max_member": {
+      "type": "number",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {
+    "rooms": {
+      "type": "hasMany",
+      "model": "room",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
+

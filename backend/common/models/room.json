@@ -1,0 +1,38 @@
+
+{
+  "name": "room",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "appliances": {
+      "type": [
+        "any"
+      ],
+      "required": true,
+      "default": [
+        "[\"\"]"
+      ]
+    },
+    "roomID": {
+      "type": "string",
+      "id": true,
+      "required": true,
+      "index": true,
+      "default": "room1234"
+    },
+    "theme": {
+      "type": [
+        "string"
+      ],
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
+

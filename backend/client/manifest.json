@@ -1,0 +1,15 @@
+
+{
+  "name": "https://opto.mybluemix.net",
+  "gcm_sender_id": "482941778795",
+  "short_name": "https://opto.mybluemix.net",
+  "start_url": "/",
+  "display": "standalone",
+  "icons": [{
+    "src": "assets/imgs/logo.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }],
+  "background_color": "#4e8ef7",
+  "theme_color": "#4e8ef7"
+}

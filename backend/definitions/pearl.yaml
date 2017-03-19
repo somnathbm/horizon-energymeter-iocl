@@ -1,0 +1,1384 @@
+
+paths:
+  '/clients/{id}/rooms/{fk}':
+    get:
+      tags:
+        - client
+      summary: Find a related item by id for rooms.
+      operationId: client.prototype.__findById__rooms
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for rooms
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: PersistedModel id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/room'
+      deprecated: false
+    delete:
+      tags:
+        - client
+      summary: Delete a related item by id for rooms.
+      operationId: client.prototype.__destroyById__rooms
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for rooms
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: PersistedModel id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+    put:
+      tags:
+        - client
+      summary: Update a related item by id for rooms.
+      operationId: client.prototype.__updateById__rooms
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for rooms
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/client'
+        - name: id
+          in: path
+          description: PersistedModel id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/room'
+      deprecated: false
+  '/clients/{id}/rooms':
+    get:
+      tags:
+        - client
+      summary: Queries rooms of client.
+      operationId: client.prototype.__get__rooms
+      parameters:
+        - name: filter
+          in: query
+          required: false
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: PersistedModel id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/room'
+      deprecated: false
+    post:
+      tags:
+        - client
+      summary: Creates a new instance in rooms of this model.
+      operationId: client.prototype.__create__rooms
+      parameters:
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/client'
+        - name: id
+          in: path
+          description: PersistedModel id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/room'
+      deprecated: false
+    delete:
+      tags:
+        - client
+      summary: Deletes all rooms of this model.
+      operationId: client.prototype.__delete__rooms
+      parameters:
+        - name: id
+          in: path
+          description: PersistedModel id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+  '/clients/{id}/rooms/count':
+    get:
+      tags:
+        - client
+      summary: Counts rooms of client.
+      operationId: client.prototype.__count__rooms
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: PersistedModel id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /clients:
+    post:
+      tags:
+        - client
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: client.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            $ref: '#/definitions/client'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/client'
+      deprecated: false
+    put:
+      tags:
+        - client
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
+      operationId: client.upsert__put_clients
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            $ref: '#/definitions/client'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/client'
+      deprecated: false
+    patch:
+      tags:
+        - client
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
+      operationId: client.upsert__patch_clients
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            $ref: '#/definitions/client'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/client'
+      deprecated: false
+    get:
+      tags:
+        - client
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: client.find
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/client'
+      deprecated: false
+  /clients/replaceOrCreate:
+    post:
+      tags:
+        - client
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: client.replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            $ref: '#/definitions/client'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/client'
+      deprecated: false
+  /clients/upsertWithWhere:
+    post:
+      tags:
+        - client
+      summary: >-
+        Update an existing model instance or insert a new one into the data
+        source based on the where criteria.
+      operationId: client.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            $ref: '#/definitions/client'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/client'
+      deprecated: false
+  '/clients/{id}/exists':
+    get:
+      tags:
+        - client
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'client.exists__get_clients_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/clients/{id}':
+    head:
+      tags:
+        - client
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'client.exists__head_clients_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - client
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: client.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: Filter defining fields and include
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/client'
+      deprecated: false
+    delete:
+      tags:
+        - client
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: client.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    put:
+      tags:
+        - client
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
+      operationId: 'client.prototype.updateAttributes__put_clients_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            $ref: '#/definitions/client'
+        - name: id
+          in: path
+          description: PersistedModel id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/client'
+      deprecated: false
+    patch:
+      tags:
+        - client
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
+      operationId: 'client.prototype.updateAttributes__patch_clients_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            $ref: '#/definitions/client'
+        - name: id
+          in: path
+          description: PersistedModel id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/client'
+      deprecated: false
+  '/clients/{id}/replace':
+    post:
+      tags:
+        - client
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: client.replaceById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            $ref: '#/definitions/client'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/client'
+      deprecated: false
+  /clients/findOne:
+    get:
+      tags:
+        - client
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: client.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/client'
+      deprecated: false
+  /clients/update:
+    post:
+      tags:
+        - client
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: client.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            $ref: '#/definitions/client'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: The number of instances updated
+            type: object
+      deprecated: false
+  /clients/count:
+    get:
+      tags:
+        - client
+      summary: Count instances of the model matched by where from the data source.
+      operationId: client.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /components:
+    post:
+      tags:
+        - component
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: component.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            $ref: '#/definitions/component'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/component'
+      deprecated: false
+    put:
+      tags:
+        - component
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
+      operationId: component.upsert__put_components
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            $ref: '#/definitions/component'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/component'
+      deprecated: false
+    patch:
+      tags:
+        - component
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
+      operationId: component.upsert__patch_components
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            $ref: '#/definitions/component'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/component'
+      deprecated: false
+    get:
+      tags:
+        - component
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: component.find
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/component'
+      deprecated: false
+  /components/replaceOrCreate:
+    post:
+      tags:
+        - component
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: component.replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            $ref: '#/definitions/component'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/component'
+      deprecated: false
+  /components/upsertWithWhere:
+    post:
+      tags:
+        - component
+      summary: >-
+        Update an existing model instance or insert a new one into the data
+        source based on the where criteria.
+      operationId: component.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            $ref: '#/definitions/component'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/component'
+      deprecated: false
+  '/components/{id}/exists':
+    get:
+      tags:
+        - component
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'component.exists__get_components_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/components/{id}':
+    head:
+      tags:
+        - component
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'component.exists__head_components_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - component
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: component.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: Filter defining fields and include
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/component'
+      deprecated: false
+    delete:
+      tags:
+        - component
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: component.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    put:
+      tags:
+        - component
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
+      operationId: 'component.prototype.updateAttributes__put_components_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            $ref: '#/definitions/component'
+        - name: id
+          in: path
+          description: PersistedModel id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/component'
+      deprecated: false
+    patch:
+      tags:
+        - component
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
+      operationId: 'component.prototype.updateAttributes__patch_components_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            $ref: '#/definitions/component'
+        - name: id
+          in: path
+          description: PersistedModel id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/component'
+      deprecated: false
+  '/components/{id}/replace':
+    post:
+      tags:
+        - component
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: component.replaceById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            $ref: '#/definitions/component'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/component'
+      deprecated: false
+  /components/findOne:
+    get:
+      tags:
+        - component
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: component.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/component'
+      deprecated: false
+  /components/update:
+    post:
+      tags:
+        - component
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: component.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            $ref: '#/definitions/component'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: The number of instances updated
+            type: object
+      deprecated: false
+  /components/count:
+    get:
+      tags:
+        - component
+      summary: Count instances of the model matched by where from the data source.
+      operationId: component.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /themes:
+    post:
+      tags:
+        - theme
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: theme.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            $ref: '#/definitions/theme'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/theme'
+      deprecated: false
+    put:
+      tags:
+        - theme
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
+      operationId: theme.upsert__put_themes
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            $ref: '#/definitions/theme'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/theme'
+      deprecated: false
+    patch:
+      tags:
+        - theme
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
+      operationId: theme.upsert__patch_themes
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            $ref: '#/definitions/theme'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/theme'
+      deprecated: false
+    get:
+      tags:
+        - theme
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: theme.find
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/theme'
+      deprecated: false
+  /themes/replaceOrCreate:
+    post:
+      tags:
+        - theme
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: theme.replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            $ref: '#/definitions/theme'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/theme'
+      deprecated: false
+  /themes/upsertWithWhere:
+    post:
+      tags:
+        - theme
+      summary: >-
+        Update an existing model instance or insert a new one into the data
+        source based on the where criteria.
+      operationId: theme.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            $ref: '#/definitions/theme'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/theme'
+      deprecated: false
+  '/themes/{id}/exists':
+    get:
+      tags:
+        - theme
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'theme.exists__get_themes_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/themes/{id}':
+    head:
+      tags:
+        - theme
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'theme.exists__head_themes_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - theme
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: theme.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: Filter defining fields and include
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/theme'
+      deprecated: false
+    delete:
+      tags:
+        - theme
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: theme.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    put:
+      tags:
+        - theme
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
+      operationId: 'theme.prototype.updateAttributes__put_themes_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            $ref: '#/definitions/theme'
+        - name: id
+          in: path
+          description: PersistedModel id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/theme'
+      deprecated: false
+    patch:
+      tags:
+        - theme
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
+      operationId: 'theme.prototype.updateAttributes__patch_themes_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            $ref: '#/definitions/theme'
+        - name: id
+          in: path
+          description: PersistedModel id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/theme'
+      deprecated: false
+  '/themes/{id}/replace':
+    post:
+      tags:
+        - theme
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: theme.replaceById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            $ref: '#/definitions/theme'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/theme'
+      deprecated: false
+  /themes/findOne:
+    get:
+      tags:
+        - theme
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: theme.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/theme'
+      deprecated: false
+  /themes/update:
+    post:
+      tags:
+        - theme
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: theme.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            $ref: '#/definitions/theme'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: The number of instances updated
+            type: object
+      deprecated: false
+  /themes/count:
+    get:
+      tags:
+        - theme
+      summary: Count instances of the model matched by where from the data source.
+      operationId: theme.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+definitions:
+  x-any:
+    properties: {}
+  room:
+    properties:
+      appliances:
+        default:
+          - '[""]'
+        type: array
+        items:
+          $ref: '#/definitions/x-any'
+      roomID:
+        default: room1234
+        type: string
+      theme:
+        type: array
+        items:
+          type: string
+      clientId:
+        type: string
+    required:
+      - appliances
+      - roomID
+    additionalProperties: false
+  client:
+    properties:
+      clientID:
+        default: cl123
+        type: string
+      email:
+        default: john@doe.com
+        type: string
+      name:
+        default: john
+        type: string
+      phone:
+        default: '9696969696'
+        type: string
+      auth_token:
+        type: string
+      invitation_code:
+        type: string
+      max_member:
+        type: number
+        format: double
+    required:
+      - clientID
+      - email
+      - name
+      - phone
+    additionalProperties: false
+  component:
+    properties:
+      imgURL:
+        default: ' '
+        type: string
+      in_use:
+        default: false
+        type: boolean
+      name:
+        default: ' '
+        type: string
+    required:
+      - imgURL
+      - in_use
+      - name
+    additionalProperties: false
+  theme:
+    properties:
+      name:
+        default: ' '
+        type: string
+      themeURL:
+        default: ' '
+        type: string
+    required:
+      - name
+      - themeURL
+    additionalProperties: false
+basePath: /api
+swagger: '2.0'
+info:
+  x-ibm-name: pearl
+  version: 1.0.0
+  title: pearl
+schemes:
+  - https
+host: $(catalog.host)
+consumes:
+  - application/json
+produces:
+  - application/json
+securityDefinitions:
+  clientIdHeader:
+    type: apiKey
+    in: header
+    name: X-IBM-Client-Id
+  clientSecretHeader:
+    in: header
+    name: X-IBM-Client-Secret
+    type: apiKey
+security:
+  - clientIdHeader: []
+    clientSecretHeader: []
+x-ibm-configuration:
+  testable: true
+  enforced: true
+  cors:
+    enabled: true
+  catalogs:
+    apic-dev:
+      properties:
+        runtime-url: $(TARGET_URL)
+    sb:
+      properties:
+        runtime-url: 'https://tiktok.mybluemix.net'
+        invoke-tls-profile: 'client:Loopback-client'
+  assembly:
+    execute:
+      - invoke:
+          target-url: $(runtime-url)$(request.path)$(request.search)
+          tls-profile: $(invoke-tls-profile)
+  properties:
+    runtime-url:
+      value: ''
+      description: ''
+      encoded: false
+    invoke-tls-profile:
+      value: ''
+      description: ''
+      encoded: false
+

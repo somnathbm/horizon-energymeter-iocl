@@ -1,0 +1,33 @@
+
+{
+  "name": "component",
+  "plural": "components",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "imgURL": {
+      "type": "string",
+      "required": true,
+      "default": " "
+    },
+    "in_use": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "name": {
+      "type": "string",
+      "id": true,
+      "required": true,
+      "default": " "
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
+
