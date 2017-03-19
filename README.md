@@ -5,7 +5,7 @@ A energy meter system to quickly view energy consumption data in a simplest way 
 ## Product applies to
 
   - House, appartments, villa
-  - Industrial complex, Hotels, Enterprise corporations
+  - Industrial complex, Hotels, Hospitals, Enterprise corporations
 
 ## End-user availability
 
