@@ -1,14 +1,16 @@
 import { Component } from '@angular/core';
 
 import { NavController } from 'ionic-angular';
+import { SupplyLine } from '../supply/supply';
 
 @Component({
   selector: 'dashboard',
-  templateUrl: 'dashboard.html'
+  templateUrl: 'dashboard.html',
+  providers: [SupplyLine]
 })
 export class Dashboard {
 
-  constructor(public navCtrl: NavController) {
+  constructor(private navCtrl: NavController, private supply: SupplyLine) {
 
   }
 

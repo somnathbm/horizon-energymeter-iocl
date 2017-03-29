@@ -1,0 +1,43 @@
+supply {
+  %meter-output-data {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
+
+  .data-grid {
+    position: absolute;
+    z-index: 99999;
+    margin-top: 36px;
+    .data {
+      margin-bottom: 36px;
+      ion-card-title {
+        color: #757575;
+        font-size: 1.225rem;
+      }
+    }
+  }
+
+  .output-data, .output-label, .control-status {
+    @extend %meter-output-data;
+  }
+
+  .data .output-data p {
+    color: #212121;
+    font-size: 3rem;
+  }
+
+  .data .output-label p {
+    color: #2196F3;
+  }
+
+  .data .control-status button {
+    background-color: transparent;
+    color: #2196F3;
+    box-shadow: none;
+  }
+
+  .data.status p {
+    color: #f53d3d;
+  }
+}

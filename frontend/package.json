@@ -1,5 +1,6 @@
 {
-  "name": "FusionCore",
+  "name": "fusion-core",
+  "version": "0.1.0",
   "author": "Somnath Mukherjee",
   "homepage": "http://horizoniot.com/",
   "private": true,
@@ -23,7 +24,10 @@
     "ionic-angular": "2.2.0",
     "ionic-native": "2.8.1",
     "ionicons": "3.0.0",
+    "pubnub": "^4.6.0",
+    "pubnub-angular": "^4.0.2",
     "rxjs": "5.0.1",
+    "socket.io": "^1.7.3",
     "sw-toolbox": "3.4.0",
     "zone.js": "0.7.2"
   },

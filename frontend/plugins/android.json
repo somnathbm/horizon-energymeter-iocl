@@ -8,22 +8,22 @@
     },
     "installed_plugins": {
         "cordova-plugin-console": {
-            "PACKAGE_NAME": "com.ionicframework.fusioncore452505"
+            "PACKAGE_NAME": "com.FusionCore"
         },
         "cordova-plugin-device": {
-            "PACKAGE_NAME": "com.ionicframework.fusioncore452505"
+            "PACKAGE_NAME": "com.FusionCore"
         },
         "cordova-plugin-splashscreen": {
-            "PACKAGE_NAME": "com.ionicframework.fusioncore452505"
+            "PACKAGE_NAME": "com.FusionCore"
         },
         "cordova-plugin-statusbar": {
-            "PACKAGE_NAME": "com.ionicframework.fusioncore452505"
+            "PACKAGE_NAME": "com.FusionCore"
         },
         "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "com.ionicframework.fusioncore452505"
+            "PACKAGE_NAME": "com.FusionCore"
         },
         "ionic-plugin-keyboard": {
-            "PACKAGE_NAME": "com.ionicframework.fusioncore452505"
+            "PACKAGE_NAME": "com.FusionCore"
         }
     },
     "dependent_plugins": {}
