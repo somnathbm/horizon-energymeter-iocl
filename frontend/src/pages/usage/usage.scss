@@ -1,0 +1,27 @@
+usage {
+  %map-options-layout {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+
+  .data-chart {
+    position: absolute;
+    #myChart {
+      margin-bottom: 24px;
+    }
+  }
+
+  .chart-periods, .selected-servo, .chart-types {
+    margin-top: 64px;
+    margin-bottom: 24px;
+  }
+
+  .selected-servo {
+    margin-top: 34px;
+  }
+
+  .chart-periods > ion-buttons, .selected-servo > ion-buttons, .chart-types > ion-buttons {
+    @extend %map-options-layout;
+  }
+}
