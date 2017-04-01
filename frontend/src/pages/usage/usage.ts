@@ -3,12 +3,15 @@ import { NavController } from 'ionic-angular';
 
 import { ChartsModule, BaseChartDirective } from 'ng2-charts';
 
+// custom service
+import { MobileBackendTransportService } from '../../app/services/mobile-backend.service';
+
 @Component({
   selector: 'usage',
   templateUrl: 'usage.html'
 })
 export class Usage {
-  constructor() {}
+  constructor(private mbTransport: MobileBackendTransportService) {}
 
   // memeber variables
   private requestedDataType = 'input_voltage';
@@ -55,7 +58,7 @@ export class Usage {
   }
 
   queryData(timestampdata) {
-
+    // handle HTTP request via mobile backend transport service
   }
 
   watchPastHour(capturedHoursHand, capturedMinutesHand) {
@@ -106,6 +109,6 @@ export class Usage {
   }
 
   renderChart(type) {
-    
+
   }
 }

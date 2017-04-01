@@ -3,7 +3,13 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 
 import { ChartsModule, BaseChartDirective } from 'ng2-charts';
 
+/* custom service */
+import { MobileBackendTransportService } from 'services/mobile-backend.service';
+
+/* app root component */
 import { MyApp } from './app.component';
+
+/* view classes (components, directives, pipes) */
 import { Dashboard } from '../pages/dashboard/dashboard';
 import { SupplyLine } from '../pages/supply/supply';
 import { Usage } from '../pages/usage/usage';
@@ -22,10 +28,8 @@ import { Usage } from '../pages/usage/usage';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    Dashboard,
-    SupplyLine,
-    Usage
+    Dashboard
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, MobileBackendTransportService]
 })
 export class AppModule {}

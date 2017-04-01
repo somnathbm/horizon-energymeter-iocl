@@ -16,7 +16,7 @@ export class SupplyLine {
   private isOnline = false;
 
   /**
-  * initiate socket.io connection
+  * initiate socket.io connection and handle data streaming
   */
   openTunnel() {
     var socket = socketClient.connect('https://opto.mybluemix.net'),
