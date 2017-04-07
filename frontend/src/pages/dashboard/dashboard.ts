@@ -1,6 +1,10 @@
+/* import core module first */
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
+/* import view classes */
+import { SearchServo } from '../search/search';
+import { NotificationSettings } from '../notification-settings/notification-settings';
 
 @Component({
   selector: 'dashboard',
@@ -18,5 +22,20 @@ export class Dashboard {
   // switch view from grid to analytics and vice versa
   switchView() {
     this.isUsageView = !this.isUsageView;
+  }
+
+  // search servo
+  searchServo() {
+    this.navCtrl.push(SearchServo);
+  }
+
+  // configure notification configuration
+  notifySettings() {
+    this.navCtrl.push(NotificationSettings);
+  }
+
+  // export and download data
+  downloadData() {
+
   }
 }

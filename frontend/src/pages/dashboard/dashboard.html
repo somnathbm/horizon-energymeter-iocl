@@ -11,7 +11,7 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="dash">
   <supply *ngIf="!isUsageView"></supply>
   <usage *ngIf="isUsageView"></usage>
 
@@ -20,5 +20,22 @@
       <ion-icon name="pulse" *ngIf="!isUsageView"></ion-icon>
       <ion-icon name="grid" *ngIf="isUsageView"></ion-icon>
     </button>
+  </ion-fab>
+
+  <ion-fab top right edge>
+    <button ion-fab color="primary">
+      <ion-icon name="settings"></ion-icon>
+    </button>
+    <ion-fab-list side="bottom">
+      <button ion-fab color="primary" (click)="searchServo()">
+        <ion-icon name="search"></ion-icon>
+      </button>
+      <button ion-fab color="primary" (click)="notifySettings()">
+        <ion-icon name="notifications"></ion-icon>
+      </button>
+      <button ion-fab color="primary"  (click)="downloadData()">
+        <ion-icon name="cloud-download"></ion-icon>
+      </button>
+    </ion-fab-list>
   </ion-fab>
 </ion-content>
