@@ -6,6 +6,9 @@ import { NavController } from 'ionic-angular';
 import { SearchServo } from '../search/search';
 import { NotificationSettings } from '../notification-settings/notification-settings';
 
+/* import external library / modules */
+import * as jsPDF from 'jspdf';
+
 @Component({
   selector: 'dashboard',
   templateUrl: 'dashboard.html'
