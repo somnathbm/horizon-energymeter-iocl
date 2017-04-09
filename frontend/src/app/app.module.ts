@@ -5,6 +5,7 @@ import { ChartsModule, BaseChartDirective } from 'ng2-charts';
 
 /* custom service */
 import { MobileBackendTransportService } from './services/mobile-backend.service';
+import { DataStreamingService } from './services/data-streaming.service';
 
 /* app root component */
 import { MyApp } from './app.component';
@@ -36,6 +37,6 @@ import { NotificationSettings } from '../pages/notification-settings/notificatio
     SearchServo,
     NotificationSettings
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, MobileBackendTransportService]
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, MobileBackendTransportService, DataStreamingService]
 })
 export class AppModule {}
